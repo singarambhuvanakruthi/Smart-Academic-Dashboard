@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Academic Dashboard</title>
+
+    <!-- Icons (no emojis now) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="main">
+
+    <!-- Logo -->
+    <div class="logo">
+        <i class="ri-graduation-cap-line"></i>
+    </div>
+
+    <h1 class="main-title">SMART ACADEMIC DASHBOARD</h1>
+
+    <div class="card">
+
+        <!-- Toggle -->
+        <div class="toggle">
+            <button id="studentBtn" class="active">
+                <i class="ri-book-line"></i> Student
+            </button>
+            <button id="teacherBtn">
+                <i class="ri-user-3-line"></i> Teacher
+            </button>
+        </div>
+
+        <!-- Username -->
+        <label>USERNAME</label>
+        <div class="input-box">
+            <i class="ri-user-line"></i>
+         <input id="username" type="text" placeholder="Enter your ID">
+        </div>
+
+        <!-- Password -->
+        <label>PASSWORD</label>
+        <div class="input-box">
+            <i class="ri-lock-2-line"></i>
+           <input id="password" type="password" placeholder="••••••••">
+        </div>
+
+        <!-- Login -->
+        <button id="loginBtn" class="login-btn">
+            Login as Student →
+        </button>
+
+        <p class="forgot">Forgot credentials?</p>
+
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

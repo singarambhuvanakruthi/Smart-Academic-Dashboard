@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    /* Slightly stronger but still soft */
+    background: linear-gradient(
+        to bottom right,
+        #eaf2ff,   /* light blue (visible) */
+        #fdeff6    /* light pink (visible) */
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Center */
+.main {
+    text-align: center;
+}
+
+/* Logo box */
+.logo {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #7b2ff7, #2b6cff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i {
+    color: white;
+    font-size: 28px;
+}
+
+/* Title */
+h1 {
+    margin: 10px 0 0;
+}
+
+.main-title {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: 1px;
+}
+
+/* Card */
+.card {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 18px;
+    width: 320px;
+    margin-top: 20px;
+
+    /* STRONGER SHADOW */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Toggle */
+.toggle {
+    display: flex;
+    background: #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.toggle button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.toggle button i {
+    margin-right: 5px;
+}
+
+.toggle .active {
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    font-weight: 600;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    margin: 10px 0 5px;
+}
+
+/* Input */
+.input-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.input-box i {
+    margin-right: 8px;
+    color: gray;
+}
+
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+
+    /* LESS ROUND (your requirement) */
+    border-radius: 10px;
+
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+/* Forgot spacing FIX */
+.forgot {
+    margin-top: 20px;
+    font-size: 12px;
+    color: gray;
+}
+.toggle button {
+    transition: all 0.3s ease;
+}
+.student-active {
+    color: #2b6cff !important;
+}
+
+/* Teacher active → purple */
+.teacher-active {
+    color: #7b2ff7 !important;
+}
+.student-btn {
+    background: linear-gradient(135deg, #2b6cff, #4a90ff);
+}
+
+/* Teacher button */
+.teacher-btn {
+    background: linear-gradient(135deg, #7b2ff7, #b84cff);
+}
+.student-btn:hover {
+    background: linear-gradient(135deg, #1f5ae0, #3a7df0);
+}
+
+/* Teacher hover (slightly darker purple) */
+.teacher-btn:hover {
+    background: linear-gradient(135deg, #6920d8, #a03be0);
+}

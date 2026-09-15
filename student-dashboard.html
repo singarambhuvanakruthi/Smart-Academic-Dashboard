@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Smart Academic Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div>
+                <div class="brand">
+                    <div class="brand-logo">
+                        <i class="ri-graduation-cap-line"></i>
+                    </div>
+                    <div class="brand-text">Smart Academic</div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <i class="ri-user-3-line"></i>
+                        <span class="status-dot"></span>
+                    </div>
+                    <h2 id="sidebarUserName">Bhuvana Kruthi</h2>
+                    <p id="sidebarUserCourse">B.Tech 2nd Year - 2nd Semester</p>
+                    <p id="sidebarUserBranch">CSE - A</p>
+                </div>
+
+              <nav class="sidebar-menu">
+    <a href="student-dashboard.html" class="menu-item active">
+        <i class="ri-dashboard-line"></i>
+        <span>Dashboard</span>
+    </a>
+
+    <a href="feedback.html" class="menu-item">
+        <i class="ri-chat-1-line"></i>
+        <span>Classroom Feedback</span>
+    </a>
+
+    <a href="assignment.html" class="menu-item">
+        <i class="ri-task-line"></i>
+        <span>Assignment Tracker</span>
+    </a>
+
+    <a href="complaint.html" class="menu-item">
+        <i class="ri-error-warning-line"></i>
+        <span>Complaint & Request Box</span>
+    </a>
+</nav>
+            </div>
+
+            <div class="logout-wrap">
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="ri-logout-box-r-line"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="page-title-wrap">
+                    <h1>Dashboard</h1>
+                    <p id="welcomeText">Welcome back!</p>
+                </div>
+
+                <div class="topbar-right">
+                    <div class="search-box">
+                        <i class="ri-search-line"></i>
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search feedback, assignments, complaints..."
+                        >
+                    </div>
+
+                    <button class="icon-btn" title="Notifications">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="notif-badge">3</span>
+                    </button>
+
+                    <div class="top-user">
+                        <div class="top-user-icon">
+                            <i class="ri-user-line"></i>
+                        </div>
+                        <span id="topUserName">Bhuvana</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="dashboard-body">
+
+                <div class="welcome-card">
+                    <div>
+                        <h2 id="mainWelcomeName">Welcome, Bhuvana Kruthi</h2>
+                        <p id="mainWelcomeSubtext">
+                            Here is your academic overview for today.
+                        </p>
+                    </div>
+                    <div class="welcome-badge">
+                        <i class="ri-calendar-check-line"></i>
+                        <span id="todayLabel">Today</span>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <!-- Today's Schedule -->
+                    <section class="big-card schedule-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Today's Schedule</h3>
+                                <p id="todayDayText">Classes for today</p>
+                            </div>
+                            <div class="header-note" id="userRoleText">
+                                STUDENT DASHBOARD
+                            </div>
+                        </div>
+
+                        <div id="scheduleList" class="schedule-list">
+                            <!-- Filled by JS -->
+                        </div>
+                    </section>
+
+                    <!-- Quick Actions -->
+                    <section class="small-card actions-card">
+                        <div class="card-header simple">
+                            <h3>Quick Actions</h3>
+                        </div>
+
+                        <div class="quick-actions">
+                            <button class="action-box" data-page="feedback">
+                                <i class="ri-chat-1-line"></i>
+                                <span>Give Feedback</span>
+                            </button>
+
+                            <button class="action-box" data-page="assignment">
+                                <i class="ri-task-line"></i>
+                                <span>Assignments</span>
+                            </button>
+
+                            <button class="action-box" data-page="complaint">
+                                <i class="ri-file-warning-line"></i>
+                                <span>Complaint Box</span>
+                            </button>
+
+                            <button class="action-box" data-page="request">
+                                <i class="ri-file-list-3-line"></i>
+                                <span>Send Request</span>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Summary -->
+                    <section class="small-card summary-card">
+                        <div class="card-header simple">
+                            <h3>Overview</h3>
+                        </div>
+
+                        <div class="summary-list">
+                            <div class="summary-item">
+                                <div class="summary-icon blue">
+                                    <i class="ri-book-open-line"></i>
+                                </div>
+                                <div>
+                                    <h4 id="classesCount">0</h4>
+                                    <p>Classes Today</p>
+                                </div>
+                            </div>
+
+                            <div class="summary-item">
+                                <div class="summary-icon orange">
+                                    <i class="ri-time-line"></i>
+                                </div>
+                                <div>
+                                    <h4>2</h4>
+                                    <p>Pending Assignments</p>
+                                </div>
+                            </div>
+
+                            <div class="summary-item">
+                                <div class="summary-icon purple">
+                                    <i class="ri-chat-check-line"></i>
+                                </div>
+                                <div>
+                                    <h4>1</h4>
+                                    <p>New Updates</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

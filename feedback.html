@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div>
+                <div class="brand">
+                    <div class="brand-logo">
+                        <i class="ri-graduation-cap-line"></i>
+                    </div>
+                    <div class="brand-text">Smart Academic</div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <i class="ri-user-3-line"></i>
+                        <span class="status-dot"></span>
+                    </div>
+                    <h2 id="sidebarUserName">S. Bhuvana Kruthi</h2>
+                    <p id="sidebarUserCourse">B.Tech 2nd Year - 2nd Semester</p>
+                    <p id="sidebarUserBranch">CSE - A</p>
+                </div>
+
+                <nav class="sidebar-menu">
+                    <a href="student-dashboard.html" class="menu-item">
+                        <i class="ri-dashboard-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a href="feedback.html" class="menu-item active">
+                        <i class="ri-chat-1-line"></i>
+                        <span>Classroom Feedback</span>
+                    </a>
+
+                    <a href="assignment.html" class="menu-item">
+                        <i class="ri-task-line"></i>
+                        <span>Assignment Tracker</span>
+                    </a>
+
+                    <a href="complaint.html" class="menu-item">
+                        <i class="ri-error-warning-line"></i>
+                        <span>Complaint & Request Box</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="logout-wrap">
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="ri-logout-box-r-line"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <h1>Classroom Feedback</h1>
+
+                <div class="topbar-right">
+                    <div class="search-box">
+                        <i class="ri-search-line"></i>
+                        <input type="text" id="searchInput" placeholder="Search...">
+                    </div>
+
+                    <button class="icon-btn">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="notif-badge">3</span>
+                    </button>
+
+                    <div class="top-user">
+                        <div class="top-user-icon">
+                            <i class="ri-user-line"></i>
+                        </div>
+                        <span id="topUserName">Bhuvana</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="page-body">
+                <div class="feedback-card">
+                    <h2>Submit Class Feedback</h2>
+
+                    <div class="field full-width">
+                        <label>TODAY'S SUBJECTS</label>
+                        <div id="todaySubjects" class="subjects-list"></div>
+                    </div>
+
+                    <div class="field full-width">
+                        <label>SELECTED CLASS TIME</label>
+                        <div class="time-box">
+                            <i class="ri-time-line"></i>
+                            <span id="classTime">Select one of today’s subjects</span>
+                        </div>
+                    </div>
+
+                    <div class="feedback-buttons">
+                        <button class="feedback-btn understood" data-value="Understood">
+                            <i class="ri-checkbox-circle-line"></i>
+                            Understood
+                        </button>
+
+                        <button class="feedback-btn confused" data-value="Confused">
+                            <i class="ri-error-warning-line"></i>
+                            Confused
+                        </button>
+
+                        <button class="feedback-btn toofast" data-value="Too Fast">
+                            <i class="ri-time-line"></i>
+                            Too Fast
+                        </button>
+                    </div>
+
+                    <div class="field full-width">
+                        <textarea id="doubtText" placeholder="Type your doubt or specific question..."></textarea>
+                    </div>
+
+                    <div class="submit-row">
+                        <button id="submitFeedbackBtn" class="submit-btn">Submit Feedback</button>
+                    </div>
+
+                    <p id="feedbackMessage" class="message"></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/feedback.js"></script>
+</body>
+</html>
